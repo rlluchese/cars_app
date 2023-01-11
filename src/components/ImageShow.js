@@ -1,7 +1,7 @@
-function ImageShow() {
+function ImageShow({ imagePath }) {
     return (
       <div>
-        ImageShow
+        <img alt="Search result" src={ imagePath } />
       </div>
     );
   }

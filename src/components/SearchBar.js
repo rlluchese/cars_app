@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 function SearchBar({ onSubmit }) {
-    const [term, setTerm] = useState('');
+    const [term, setTerm] = useState('cars');
 
     const handleFormSubmit = (event) => {
         event.preventDefault();
@@ -9,7 +9,7 @@ function SearchBar({ onSubmit }) {
       };
 
     const handleInputChange = (event) => {
-      setTerm(event.target.value);
+      setTerm(event.target.value.replace(/[0-9]/, ''));
     };
 
     return (
